@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn Öneri Temizleyici V2",
+  "version": "2.0.0",
+  "description": "LinkedIn'deki Tanıyabileceğiniz kişiler kartlarını otomatik kapatır.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://www.linkedin.com/*"],
+  "action": {
+    "default_title": "LinkedIn Öneri Temizleyici",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "matches": ["https://www.linkedin.com/*"],
+    "js": ["content.js"],
+    "run_at": "document_idle"
+  }]
+}

@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><title>LinkedIn Öneri Temizleyici</title>
+<style>
+body{width:300px;padding:18px;font-family:Arial,sans-serif}
+h2{font-size:18px;margin:0 0 14px}.status{padding:8px 10px;background:#eee;border-radius:8px}
+.row{display:flex;justify-content:space-between;align-items:center;margin:12px 0}
+input{width:70px;padding:6px}button{width:100%;padding:9px;margin-top:8px;border-radius:8px;background:white}
+small{display:block;margin-top:8px;color:#666;line-height:1.4}
+</style></head><body>
+<h2>LinkedIn Öneri Temizleyici</h2>
+<div id="status" class="status">Yükleniyor...</div>
+<div class="row"><span>Otomatik temizleme</span><input id="enabled" type="checkbox"></div>
+<div class="row"><span>Tarama aralığı (sn)</span><input id="interval" type="number" min="3" max="60"></div>
+<div class="row"><span>Tarama başına</span><input id="max" type="number" min="1" max="20"></div>
+<div class="row"><span>Kapatılan öneri</span><strong id="count">0</strong></div>
+<button id="scan">Şimdi tara</button><button id="reset">Sayacı sıfırla</button>
+<small>V2, öneri bölümünü bulup kartın sağ üstündeki kapatma düğmesini konumuyla da doğrular. Bağlantı kur düğmesine basmaz.</small>
+<script src="popup.js"></script></body></html>
